@@ -1,0 +1,33 @@
+extends ../_template.pug
+
+block content
+    +header()
+    section.section.section-entry
+        .entry-menu#hamburger-js
+            a(href="").entry-menu-item.entry-menu-profile
+                img(src="../img/profile-photo.png", alt="").menu-profile-photo
+                .menu-profile-right
+                    h4.menu-profile-email ProfileName
+                    p.menu-profile-phone +79883814296
+            ul.entry-menu-list#js-entry-nav
+                li.entry-menu-item
+                    a(href="add-mail.html") Добавить почту
+                li.entry-menu-item История поездок
+                li.entry-menu-item
+                    a(href="payment.html") Способы оплаты
+                li.entry-menu-item
+                    a(href="my-addresses.html") Мои адреса
+                li.entry-menu-item
+                    a(href="add-promocode.html") Промокод
+                li.entry-menu-item Настройки
+                li.entry-menu-item Информация
+                li.entry-menu-item Служба поддержки
+
+        .entry-page#content
+            #container
+                form(action="/", method="post").entry-form
+                    .entry-form-title
+                        h2 Введите свой номер телефона
+                    input(type="tel", name="phone", id="phone-input-id", placeholder="+7 912 345-67-89").workarea-form-input.entry-form-input
+                    button(type="submit").entry-form-submit Далее
+    +footer
